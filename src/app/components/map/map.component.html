@@ -1,0 +1,12 @@
+<div class="map-container">
+  <h2 class="map-title">Sentiment Map</h2>
+
+  <div class="controls">
+    <label for="sentimentType">Select Sentiment Type:</label>
+    <select id="sentimentType" [(ngModel)]="sentimentType" (change)="onSentimentTypeChange()">
+      <option *ngFor="let type of sentimentOptions" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div id="map" class="map-view"></div>
+</div>
